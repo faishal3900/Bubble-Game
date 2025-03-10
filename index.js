@@ -10,6 +10,7 @@ function makebubble() {
     document.querySelector("#cont").innerHTML = clutter;
 }
 
+
 function runTimer() {
     let timerint = setInterval(function () {
         if (timer > 0) {
@@ -26,11 +27,14 @@ function getNewHit() {
     document.querySelector("#hitval").textContent = hitrn;
 }
 function increaseScore() {
+
     score += 10;
     document.querySelector("#scoreval").textContent = score;
+
 }
 document.querySelector("#cont").addEventListener("click", function (dets) {
     let clickednum = Number(dets.target.textContent);
+
     if (clickednum === hitrn) {
         increaseScore();
         makebubble();
