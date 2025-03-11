@@ -1,6 +1,8 @@
 let timer = 60;
 let hitrn = 0;
 let score = 0;
+
+
 function makebubble() {
     let clutter = "";
     for (let i = 1; i <= 170; i++) {
@@ -18,6 +20,8 @@ function runTimer() {
             document.querySelector("#timerval").textContent = timer;
         } else {
             clearInterval(timerint);
+            timer = 60;
+            btn.classList.remove("remove")
             document.querySelector("#cont").innerHTML = `<h1>Game Ovear</h1>`
         }
     }, 1000)
@@ -42,9 +46,23 @@ document.querySelector("#cont").addEventListener("click", function (dets) {
     }
 })
 
-getNewHit();
-runTimer();
-makebubble();
+
+let btn = document.querySelector("#start-btn")
+btn.addEventListener("click", () => {
+    getNewHit();
+    runTimer();
+    makebubble();
+    score = 0;
+    document.querySelector("#scoreval").textContent = score;
+    btn.classList.add("remove")
+    // stopBtn.classList.add("Show")
+})
+
+
+
+
+
+
 
 
 

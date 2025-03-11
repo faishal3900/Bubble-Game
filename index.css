@@ -86,3 +86,26 @@ body {
     cursor: pointer;
     background-color: rgb(42, 0, 0);
 }
+
+.start-btn {
+    font-size: 20px;
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.remove {
+    display: none;
+}
+
+.stop-btn {
+    display: none;
+    width: 80px;
+    height: 35px;
+    font-size: 15px;
+}
+
+.Show {
+    display: block;
+}
